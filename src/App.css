@@ -1,38 +1,247 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none !important;
+  font-family: "Inconsolata", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-size: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cursor {
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.parent {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar {
+  top: 2%;
+  height: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.purpleDiv {
+  padding-top: 6rem;
+}
+
+.fullstack {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.layout {
+  padding-top: 7%;
+}
+
+.heading {
+  font-size: clamp(12px, 2.5vw + 0.1rem, 18px);
+  line-height: 25px;
+}
+
+.footText {
+  font-size: clamp(14px, 2.5vw + 0.1rem, 20px);
+}
+
+.image {
+  width: 250px;
+  height: 220px;
+}
+
+.nameBottom {
+  padding-bottom: 60px;
+}
+
+.button {
+  background-color: #ccf381 !important;
+  border: none !important;
+}
+
+.button:hover {
+  background-color: #4431d4 !important;
+}
+
+input[type="text"].form {
+  box-shadow: none !important;
+  border: none !important;
+  border-bottom: 1px solid purple !important;
+  background-color: rgb(249, 249, 249) !important;
+  font-size: 20px !important;
+}
+
+input[type="email"].form {
+  box-shadow: none !important;
+  border: none !important;
+  border-bottom: 1px solid purple !important;
+  background-color: rgb(249, 249, 249) !important;
+  font-size: 20px !important;
+}
+
+.textA {
+  box-shadow: none !important;
+  border: none !important;
+  border-bottom: 1px solid purple !important;
+  background-color: rgb(249, 249, 249) !important;
+  font-size: 20px !important;
+}
+
+input[type="text"].form::placeholder {
+  font-size: 20px !important;
+}
+
+input[type="email"].form::placeholder {
+  font-size: 20px !important;
+}
+
+.bottom {
+  padding-bottom: 60px;
+}
+
+.space {
+  letter-spacing: 5px;
+}
+
+.hr {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.worksMargin {
+  margin: 30px 0px;
+}
+
+.worksDiv {
+  height: 350px;
+}
+
+.navlocker{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 5;
+}
+
+.navlockerPadding{
+  padding-top: 80px;
+  padding-left: 20px;
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    top: 4%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .navlocker{
+    width: 400px;
+    height: 400px;
+    top: 3%;
+    left: auto;
+    right: 2%;
+  }
+
+  .parent {
+    display: block;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+  
+  }
+
+  .box {
+    height: 100vh;
+    scroll-snap-align: start;
+  }
+
+  .purpleDiv {
+    width: 65%;
+    padding-top: 9rem !important;
+  }
+
+  .greenDiv {
+    width: 35%;
+    padding-top: 11rem;
+  }
+
+  .fullstack {
+    width: 65%;
+    margin: 0px;
+    margin-left: 120px;
+  }
+
+  .image {
+    position: absolute;
+    left: -25%;
+    top: 30px;
+    border-inline-start: 5px solid;
+    border-block-start: 5px solid;
+    border-image-source: radial-gradient(
+      circle at top left,
+      #ccf381 10%,
+      transparent 40%
+    );
+    border-image-slice: 1;
+    padding: 10px;
+  }
+
+  .secondPage {
+    width: 40%;
+  }
+
+  .formWidth {
+    width: 45%;
+  }
+
+  .sendMe {
+    width: 65%;
+  }
+
+  .nameBottom {
+    padding-bottom: 0px;
+  }
+
+  .bottom {
+    padding-bottom: 15px;
+  }
+
+  .hr {
+    margin-top: 120px;
+  }
+
+  .layout {
+    padding-top: 100px;
+  }
+
+  .worksMargin {
+    margin: 15px 0px;
+  }
+
+  .worksDiv {
+    height: 220px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .purpleDiv {
+    padding-top: 7rem;
+  }
+
+  .image {
+    width: 370px;
+    height: 320px;
+  }
+
+  .heading {
+    line-height: 35px;
+  }
+
+  .worksDiv {
+    height: 400px;
   }
 }
